@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LMS Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="login .css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav class="navbar">
+          <h2 class="navlogo">DigitalLibrary</h2>
+          <ul class="listItems">
+            <li><button onclick="homeFunction()">Home</button></li>
+            <li><button onclick="userFunction()">User Login</button></li>
+            <li><button onclick="adminFunction()">Admin Login</button></li>
+          </ul>
+        </nav>
+      </header>
+      <section class="hero" id="main">
+        <div class="row container">
+          <div class="column">
+            <h2>
+              Digital education..<br />
+              rapidly grow your knowledge
+            </h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Excepturi sint iste, asperiores, architecto eos officia aliquam
+              laudantium, nesciunt nemo repellat temporibus! In, odio maxime
+              consequuntur at excepturi praesentium blanditiis consectetur.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="uimg">
+      <div class="userLogin" id="user">
+        <form action="user.html" onsubmit="return userValidate()" class="login">
+          <header><img src="login.png" /></header>
+          <div class="field">
+            <span class="fa-solid fa-user"></span
+            ><input type="text" placeholder="Email or Username" id="signName" />
+          </div>
+          <div class="field">
+            <span class="fa-solid fa-lock"></span
+            ><input type="password" placeholder="Password" id="signPass" />
+          </div>
+          <div class="forgot-password"><a href="">Forgot Password?</a></div>
+          <button type="submit" class="submit">Login</button>
+          <span class="login-form-copy">or Login with</span>
+          <div class="Social-icons">
+            <div class="Social-icon linkedin">
+              <span class="fa-brands fa-linkedin"></span>
+            </div>
+            <div class="Social-icon twitter">
+              <span class="fa-brands fa-twitter"></span>
+            </div>
+            <div class="Social-icon facebook">
+              <span class="fa-brands fa-facebook"></span>
+            </div>
+            <div class="Social-icon Gmail">
+              <span class="fa-solid fa-envelope"></span>
+            </div>
+          </div>
+          <div>
+            <span class="login-form-copy"
+              >Don't have an account?<a
+                onclick="registerFunction()"
+                class="login-form-sign_up"
+                >Sign Up</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="registration" id="register">
+      <form action="" onsubmit="return registrationValidate()" class="login">
+        <h1>Registration Form</h1>
+        <div class="field">
+          <span class="fa-solid fa-user"></span
+          ><input type="text" placeholder="Name" id="uname" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-envelope"></span
+          ><input type="text" placeholder="Email" id="umail" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-mobile"></span
+          ><input type="tel" placeholder="Mobile number" id="umob" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-lock"></span
+          ><input type="password" placeholder="Create Password" id="ucpass" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-lock"></span
+          ><input type="password" placeholder="Re-enter Password" id="upass" />
+        </div>
+        <button type="submit" class="submit">Register</button>
+      </form>
+    </div>
+    <div class="adminLogin" id="admin">
+      <form action="" onsubmit="return adminValidate()" class="login">
+        <header><img src="login.png" /></header>
+        <div class="field">
+          <span class="fa-solid fa-user"></span
+          ><input type="text" placeholder="Admin Id" id="adname" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-lock"></span
+          ><input type="password" placeholder="Password" id="adpass" />
+        </div>
+        <div class="forgot-password"><a href="">Forgot Password?</a></div>
+        <button type="submit" class="submit">Login</button>
+      </form>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>

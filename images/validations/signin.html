@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-signin-client_id" content="805990898205-9kiunv2931evemr93rg4c3qa23c6p4al.apps.googleusercontent.com">
+    <title>Sign IN</title>
+    <link rel="stylesheet" href="sign.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  </head>
+  <body>
+    
+    <div class="uimg">
+      <div class="userLogin" id="user">
+        <form action="user.html" onsubmit="return userValidate()" class="login">
+          <header><img src="login.png" /></header>
+          <div class="field">
+            <span class="fa-solid fa-user"></span
+            ><input type="text" placeholder="Email or Username" id="signName" />
+          </div>
+          <div class="field">
+            <span class="fa-solid fa-lock"></span
+            ><input type="password" placeholder="Password" id="signPass" />
+          </div>
+          <div class="forgot-password"><a href="">Forgot Password?</a></div>
+          <button type="submit" class="submit" >Login</button>
+          <span class="login-form-copy">or Login with</span>
+          <div class="Social-icons">
+            <div></div>
+            <div class="Social-icon Gmail" onclick="signInWithGmail()" >
+              <span class="fa-solid fa-envelope"></span>
+            </div>
+            
+            <div></div>
+            <!--<div class="Social-icon linkedin" onclick="signInWithLinkedIn()">
+              <span class="fa-brands fa-linkedin"></span>
+            </div>
+            <div class="Social-icon twitter" onclick="signInWithTwitter()">
+              <span class="fa-brands fa-twitter"></span>
+            </div>
+            <div class="Social-icon facebook" onclick="signInWithFacebook()">
+              <span class="fa-brands fa-facebook"></span>
+            </div>-->
+            
+          </div>
+          <div>
+            <span class="login-form-copy"
+              >Don't have an account?<a
+                onclick="registerFunction()"
+                class="login-form-sign_up"
+                >Sign Up</a
+              ></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="registration" id="register">
+      <form action="" onsubmit="return registrationValidate()" class="login">
+        <h1>Registration Form</h1>
+        <div class="field">
+          <span class="fa-solid fa-user"></span
+          ><input type="text" placeholder="Name" id="uname" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-envelope"></span
+          ><input type="text" placeholder="Email" id="umail" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-mobile"></span
+          ><input type="tel" placeholder="Mobile number" id="umob" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-lock"></span
+          ><input type="password" placeholder="Create Password" id="ucpass" />
+        </div>
+        <div class="field">
+          <span class="fa-solid fa-lock"></span
+          ><input type="password" placeholder="Re-enter Password" id="upass" />
+        </div>
+        <button type="submit" class="submit">Register</button>
+      </form>
+    </div>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDefqx-3u7ksDAmZjmKVSU5RhlC-CZkkbc",
+        authDomain: "devrev-6ae19.firebaseapp.com",
+        databaseURL: "https://devrev-6ae19-default-rtdb.firebaseio.com",
+        projectId: "devrev-6ae19",
+        storageBucket: "devrev-6ae19.appspot.com",
+        messagingSenderId: "394889530279",
+        appId: "1:394889530279:web:a8a9408175243382028482",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      import {
+        getDatabase,
+        ref,
+        set,
+        get,
+        child,
+        query,
+        orderByChild,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+      //Storing..//
+      const db = getDatabase();
+      var name = document.getElementById("uname");
+      var email = document.getElementById("umail");
+      var mob = document.getElementById("umob");
+      var pass = document.getElementById("upass");
+      var subBtn = document.getElementById("subBtn");
+      function InsertData() {
+        console.log("called");
+        set(ref(db, "Users/" + pass.value), {
+          NameOfUser: name.value,
+          EmailId: email.value,
+          MobileNumber: mob.value,
+          Password: pass.value,
+        })
+          .then(() => {
+            console.log("Data Stored");
+          })
+          .catch((error) => {
+            alert("Error=" + error);
+          });
+      }
+      subBtn.addEventListener("click", InsertData);
+    </script>
+
+
+
+
+    <script src="sign.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  </body>
+</html>

@@ -7,9 +7,11 @@ ZenBooks is an online library platform designed to provide users with a seamless
 - Extensive Book Collection: ZenBooks offers a vast collection of books across various genres, ensuring that users can find their favorite titles easily.
 - Book Rental: Users have the option to rent books for a specific duration, allowing them to enjoy their favorite reads without the commitment of purchasing.
 - Book Purchase: For book enthusiasts who prefer to own physical copies, ZenBooks provides a straightforward purchase process, delivering books to their doorstep.
+- Unique loading pattern on start
 **- Tech stack used** : 
           **Front-end**:HTML, CSS, Javascript (Jquery)
           **Database**: Firebase
+          **Api used:** Google books api  
 
 
 ##Preview of webiste

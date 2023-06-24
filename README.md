@@ -13,6 +13,11 @@ ZenBooks is an online library platform designed to provide users with a seamless
           **Database**: Firebase
           **Api used:** Google books api  
 
+**Note**
+You can login through gmail or use sample login and email id: Username:test@mail.com Password:Test4281
+
+
+
 
 ##Preview of webiste
 

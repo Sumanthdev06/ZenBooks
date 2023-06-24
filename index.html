@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zen Books</title>
+    <meta name="title" content="FLYHY">
+    <meta name="description" content="FLYHY">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preload" as="image" href="images/p1.jpg">
+    <link rel="preload" as="image" href="images/p2.jpg">
+    <link rel="preload" as="image" href="images/p3.jpeg">
+    <link rel="preload" as="image" href="images/p5.jpg">
+
+  </head>
+  <body >
+    <div class="preload " data-preload>
+        <div class="circle"></div>
+        <p class="text">On Time, Every Time-Aerofly</p>
+    </div>
+    <!--Header-->
+    <header class="header" data-header>
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" width="160" height="50" alt="Aerofly-Home">
+            </a>
+            <nav class="navbar " data-navbar>
+                <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+            <a href="#" class="logo">
+                    <img src="images/logo.png" width="160" height="50" alt="Aerofly-Home">
+            </a>
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a href="#home" class="navbar-link hover-underline active">
+                        <div class="separator"></div>
+                        <span class="span">Home</span>
+                    </a>                    
+                </li>
+
+                <li class="navbar-item">
+                    <a href="#services" class="navbar-link hover-underline ">
+                        <div class="separator"></div>
+                        <span class="span">Our Services</span>
+                    </a>                    
+                </li>
+
+                <li class="navbar-item">
+                    <a href="#about" class="navbar-link hover-underline ">
+                        <div class="separator"></div>
+                        <span class="span">About Us</span>
+                    </a>                    
+                </li>
+
+                <li class="navbar-item">
+                    <a href="#contact" class="navbar-link hover-underline ">
+                        <div class="separator"></div>
+                        <span class="span">Contact Us</span>
+                    </a>                    
+                </li>
+            </ul>
+
+            <div class="text-center">
+                <a href="mailto:bookingzenbooks@gmail.com" class="body-4 sidebar-link">bookingzenbooks@gmail.com</a>
+                <div class="separator"></div>
+                <p class="contact-label">Booking Request via call</p>
+                <a href="tel:+91 7788123098" class="body-1 contact-number hover-underline">+91 7788123098</a>
+            </div>            
+                
+            </nav>
+
+
+            <a href="#" class="btn signin transition-link" onclick="redirectToLogin()">
+                <span class="text text-1">Sign in</span>
+                <span class="text text-2" aria-hidden="true">Sign in</span>
+            </a>
+            
+            <button class="navOpen" aria-label="Open Services" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+            <div class="overlay active" data-nav-toggler data-overlay></div>
+        </div>
+
+    </header>
+    <main>
+        <article>
+            <section class="hero text-center" aria-label="home" id="home">
+                <ul class="hero-slider" data-hero-slider>
+                    <li class="slider-item active" data-hero-slider-item >
+                        <div class="slider-bg">
+                            <img src="images/b4.jpg"  width="1880" height="950" alt="" class="img-cover">
+                        </div>
+                        <p class="label-2 section-subtitle slider-reveal">Reading Delight</p>
+                        <h1 class="display-1 hero-title slider-reveal">
+                          Escape into the world of words<br>
+                          Where books come alive and dreams take flight
+                        </h1>
+                        <p class="body-2 hero-text slider-reveal">
+                            Feel the joy of reading!
+                        </p>
+                        <a href="#" class="btn btn-primary slider-reveal transition-link" onclick="redirectToLogin()">
+                            <span class="text text-1">Login to know more</span>
+                            <span class="text text-2" aria-hidden="true">Login to know more</span>
+                        </a>
+                    </li>
+                    <li class="slider-item " data-hero-slider-item >
+                        <div class="slider-bg">
+                            <img src="images/b2.jpg"  width="1880" height="950" alt="" class="img-cover">
+                        </div>
+                        <p class="label-2 section-subtitle slider-reveal">Bookish Bliss</p>
+                        <h1 class="display-1 hero-title slider-reveal">
+                            For the love of<br>
+                            reading
+                        </h1>
+                        <p class="body-2 hero-text slider-reveal">
+                          Immerse yourself in the captivating world of literature
+                        </p>
+                        <a href="#" class="btn btn-primary slider-reveal transition-link" onclick="redirectToLogin()">
+                            <span class="text text-1">Login to know more</span>
+                            <span class="text text-2" aria-hidden="true">Login to know more</span>
+                        </a>
+                    </li>
+                    <li class="slider-item " data-hero-slider-item >
+                        <div class="slider-bg">
+                            <img src="images/b1.jpg"  width="1880" height="950" alt="" class="img-cover">
+                        </div>
+                        <p class="label-2 section-subtitle slider-reveal">Feed your curiosity, read a book.</p>
+                        <h1 class="display-1 hero-title slider-reveal">
+                          Read to explore, to learn, to grow<br>
+                          Discover the world through the pages of a book.
+                        </h1>
+                        <p class="body-2 hero-text slider-reveal">
+                          Discover the joy, the thrill, the magic of reading
+                        </p>
+                        <a href="#" class="btn btn-primary slider-reveal transition-link" onclick="redirectToLogin()">
+                            <span class="text text-1">Login to know more</span>
+                            <span class="text text-2" aria-hidden="true">Login to know more</span>
+                        </a>
+                    </li>
+                </ul>
+
+            <button class="slider-btn prev" aria-label="silde to previous" data-prev-btn>
+                <ion-icon name="chevron-back"></ion-icon>
+            </button>    
+            <button class="slider-btn next" class="slide to next" data-next-btn>
+                <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+            <a href="#" class="hero-btn has-after transition-link" onclick="redirectToLogin()">
+                <img src="images/login.jpg" width="48" height="48" alt="login icon">
+                <span class="label-2 text-center span">Login to purchase</span>
+            </a>
+            </section>
+            <section class="section service bg-black-10 text-center" aria-label="service" id="services">
+                <div class="container">
+        
+                  <p class="section-subtitle label-2">Where Bookish Dreams Become Reality..</p>
+        
+                  <h2 class="headline-1 section-title">Your One-Stop Destination for Exceptional Services.</h2>
+        
+                  <p class="section-text">
+                    "Embark on a Literary Journey with Our Exquisite Services! Immerse Yourself in the World of Words through our Curated Audiobooks, a Vast Library of Knowledge and Imagination. Indulge in the Pleasure of Book Rentals and Unleash a World of Stories at Your Fingertips and Discover the Joy of Owning Your Favorite Books with our Seamless Purchase Experience."
+        
+                  <ul class="grid-list">
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <a href="#" class="has-before hover:shine">
+                          <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="images/s1.jpg" width="285" height="336" loading="lazy" alt="Audio Books"
+                              class="img-cover">
+                          </figure>
+                        </a>
+        
+                        <div class="card-content">
+        
+                          <h3 class="title-4 card-title">
+                            <a href="#">Audio Books</a>
+                          </h3>
+        
+                          <a href="#" class="btn-text hover-underline label-2">Know More!</a>
+        
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <a href="#" class="has-before hover:shine">
+                          <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="images/s2.jpg" width="285" height="336" loading="lazy" alt="sale"
+                              class="img-cover">
+                          </figure>
+                        </a>
+        
+                        <div class="card-content">
+        
+                          <h3 class="title-4 card-title">
+                            <a href="#">Books for lower prices</a>
+                          </h3>
+        
+                          <a href="#" class="btn-text hover-underline label-2">Know More!</a>
+        
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                    <li>
+                      <div class="service-card">
+        
+                        <a href="#" class="has-before hover:shine">
+                          <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="images/s3.jpg" width="285" height="336" loading="lazy" alt="Rentals"
+                              class="img-cover">
+                          </figure>
+                        </a>
+        
+                        <div class="card-content">
+        
+                          <h3 class="title-4 card-title">
+                            <a href="#">Book Rentals</a>
+                          </h3>
+        
+                          <a href="#" class="btn-text hover-underline label-2">Know More!</a>
+        
+                        </div>
+        
+                      </div>
+                    </li>
+        
+                  </ul>
+        
+                  <img src="images/shape-1.jpg" width="246" height="412" loading="lazy" alt="shape"
+                    class="shape shape-1 move-anim">
+                  <img src="images/shape-2.jpg" width="343" height="345" loading="lazy" alt="shape"
+                    class="shape shape-2 move-anim">
+        
+                </div>
+              </section>
+              <section class="section about text-center" aria-labelledby="about-label" id="about">
+                <div class="container">
+        
+                  <div class="about-content">
+        
+                    <p class="label-2 section-subtitle" id="about-label">Our Story</p>
+        
+                    <h2 class="headline-1 section-title">For the Love of Books and Endless Adventures.</h2>
+        
+                    <p class="section-text">
+                      Welcome to our digital library, a virtual haven for book lovers and knowledge seekers.
+                       At Zen Books, we understand that the pursuit of knowledge is a lifelong journey, and we are dedicated to making that journey accessible and enjoyable.<br>
+                        Whether you're an avid reader, a student in search of academic resources, or someone seeking an escape into the realm of imagination, our digital library has something for everyone.
+                      
+                    </p>
+        
+                    <div class="contact-label">Book Through Call</div>
+        
+                    <a href="tel:+91 7788123098" class="body-1 contact-number hover-underline">+91 7788123098</a>
+        
+                    <!--<a href="#" class="btn btn-primary">
+                      <span class="text text-1">Read More</span>
+        
+                      <span class="text text-2" aria-hidden="true">Read More</span>
+                    </a>-->
+        
+                  </div>
+        
+                  <figure class="about-banner">
+        
+                    <img src="images/banner1.jpg" width="570" height="570" loading="lazy" alt="about banner"
+                      class="w-100" data-parallax-item data-parallax-speed="1">
+        
+                    <div class="abs-img abs-img-1 has-before" data-parallax-item data-parallax-speed="1.75">
+                      <img src="images/banner2.jpg" width="285" height="285" loading="lazy" alt=""
+                        class="w-100">
+                    </div>
+        
+                    <div class="abs-img abs-img-2 has-before">
+                      <img src="images/stamp1.png" width="133" height="134" loading="lazy" alt="">
+                    </div>
+        
+                  </figure>
+        
+                  <img src="images/shape-3.jpg" width="197" height="194" loading="lazy" alt="" class="shape">
+        
+                </div>
+              </section>
+              <section class="special-book text-center" aria-labelledby="book-label">
+
+                <div class="special-book-banner">
+                  <img src="images/best-seller.jpg" width="940" height="900" loading="lazy" alt="Best seller"
+                    class="img-cover">
+                </div>
+        
+                <div class="special-book-content bg-black-10">
+                  <div class="container">
+        
+                    <img src="images/starred.png" width="28" height="41" loading="lazy" alt="badge" class="abs-img">
+        
+                    <p class="section-subtitle label-2">Literary Delight of the Week!</p>
+        
+                    <h2 class="headline-1 section-title">Ikigai: The Japanese Secret to a Long and Happy Life Book by Francesc Miralles and Hector Garcia (hardcover)</h2>
+        
+                    <p class="section-text">
+                        The Ikigai book introduces you to various topics related to the art of living, such as the blue zones, longevity, logotherapy, flow, yoga, tai chi, and resilience. It defines what Ikigai is and its rules. The book says that living a long and full life is under your control to an extent. Your habits and life choices can make a significant difference from an early age.
+                    </p>
+        
+                    <div class="wrapper">
+                      <del class="del body-3">Rs.230</del>
+        
+                      <span class="span body-1">Rs.179</span>
+                    </div>
+        
+                    <a href="images/validations/signin.html" class="btn btn-primary">
+                      <span class="text text-1">Login to purchase!</span>
+        
+                      <span class="text text-2" aria-hidden="true">Login to purchase!</span>
+                    </a>
+        
+                  </div>
+                </div>
+        
+                <!--<img src="./assets/images/shape-4.png" width="179" height="359" loading="lazy" alt="" class="shape shape-1">-->
+        
+                <!--<img src="./assets/images/shape-9.png" width="351" height="462" loading="lazy" alt="" class="shape shape-2"> -->
+        
+              </section>
+        
+
+
+
+
+        </article>
+    </main>
+
+    <footer class="footer section has-bg-image text-center"
+    style="background-image: url('images/footer1.jpg')" id="contact">
+    <div class="container">
+
+      <div class="footer-top grid-list">
+
+        <div class="footer-brand has-before has-after">         
+
+          <a href="mailto:bookingzenbooks@gmail.com" class="body-4 contact-link">bookingzenbooks@gmail.com</a>
+
+          <a href="tel:+91 7788123098" class="body-4 contact-link">Booking Request via call: +91 7788123098</a>
+
+          <div class="wrapper">
+            <div class="separator"></div>
+            <div class="separator"></div>
+            <div class="separator"></div>
+          </div>
+
+          <p class="title-1">Get News & Offers</p>
+
+          <p class="label-1">
+            Subscribe us & Get <span class="span">25% Off.</span>
+          </p>
+
+          <form action="" class="input-wrapper">
+            <div class="icon-wrapper">
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+
+              <input type="email" name="email_address" placeholder="Your email" autocomplete="off" class="input-field">
+            </div>
+
+            <button type="submit" class="btn btn-secondary">
+              <span class="text text-1">Subscribe</span>
+
+              <span class="text text-2" aria-hidden="true">Subscribe</span>
+            </button>
+          </form>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">Menus</a>
+          </li>
+
+          <li>
+            <a href="#" class="label-2 footer-link hover-underline">About Us</a>
+          </li>
+          <li>
+            <a href="mailto:bookingzenbooks@gmail.com" class="label-2 footer-link hover-underline">Contact</a>
+          </li>
+
+          <li>
+            <a href="images/validations/signin.html" class="label-2 footer-link hover-underline">Log-In</a>
+          </li>
+
+        </ul>
+
+        
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p class="copyright">
+          &copy; 2023 Zen Books. All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
+	<script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

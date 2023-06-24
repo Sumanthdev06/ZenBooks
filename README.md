@@ -22,7 +22,8 @@ ZenBooks is an online library platform designed to provide users with a seamless
 ---signin portal---
 ![image](https://github.com/Sumanthdev06/ZenBooks/assets/101918709/160bb61e-bef3-4fbe-9e1c-ca41995bb668)
 sign in enabled through gmail..
-![image](https://github.com/Sumanthdev06/ZenBooks/assets/101918709/f5ac8f7c-c2df-4d7d-b370-1c3ff1175ca8)
+![image](https://github.com/Sumanthdev06/ZenBooks/assets/101918709/c1d371f3-d548-43fd-a472-0b05b1ec2494)
+
 
 ---user dashboard---
 ![image](https://github.com/Sumanthdev06/ZenBooks/assets/101918709/a815823a-0b12-4ff7-b1d7-bc9bd898dcb7)

@@ -111,7 +111,7 @@ function signInWithGmail() {
   // Perform the Gmail sign-in process
   // Redirect the user to the Gmail authorization page
   var clientId =
-    "805990898205-9kiunv2931evemr93rg4c3qa23c6p4al.apps.googleusercontent.com";
+    "805990898205-e9ajof1kiie13dvsmq27u6djdrnv6lmr.apps.googleusercontent.com";
   var redirectUri = "https://sumanthdev06.github.io/User/"; // Replace with your actual redirect URI
   var scope = "email profile";
   var state = "YOUR_STATE"; // Replace with your actual state value

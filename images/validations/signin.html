@@ -17,7 +17,7 @@
     
     <div class="uimg">
       <div class="userLogin" id="user">
-        <form action="user.html" onsubmit="return userValidate()" class="login">
+        <form action="user.html" class="login">
           <header><img src="login.png" /></header>
           <div class="field">
             <span class="fa-solid fa-user"></span
@@ -28,7 +28,7 @@
             ><input type="password" placeholder="Password" id="signPass" />
           </div>
           <div class="forgot-password"><a href="">Forgot Password?</a></div>
-          <button type="submit" class="submit" >Login</button>
+          <button type="submit" id="logBtn" class="submit" >Login</button>
           <span class="login-form-copy">or Login with</span>
           <div class="Social-icons">
             <div></div>
@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="registration" id="register">
-      <form action="" onsubmit="return registrationValidate()" class="login">
+      <form action="" id="userregis" class="login">
         <h1>Registration Form</h1>
         <div class="field">
           <span class="fa-solid fa-user"></span
@@ -118,26 +118,71 @@
       var mob = document.getElementById("umob");
       var pass = document.getElementById("upass");
       var uSub = document.getElementById("subBtn");
-      function InsertData() {
+      var userForm = document.getElementById("userregis");
+      async function InsertData() {
         console.log("called");
-        set(ref(db, "Users/" + pass.value), {
-          NameOfUser: name.value,
-          EmailId: email.value,
-          MobileNumber: mob.value,
-          Password: pass.value,
-        })
-          .then(() => {
-            alert("Data Stored");
+        if (registrationValidate()) {
+          set(ref(db, "Users/" + pass.value), {
+            NameOfUser: name.value,
+            EmailId: email.value,
+            MobileNumber: mob.value,
+            Password: pass.value,
           })
-          .catch((error) => {
-            alert("Error=" + error);
-          });
+            .then(() => {
+              alert("Data Stored");
+              userForm.reset();
+              userFunction();
+              return true;
+            })
+            .catch((error) => {
+              alert("Error=" + error);
+            });
+        }
       }
-      uSub.addEventListener("click", InsertData);
+      uSub.addEventListener("click", async function (event) {
+        event.preventDefault();
+
+        var result = await InsertData();
+        if (result) {
+          userForm.submit();
+        }
+      });
+      //Validating...
+      var logName = document.getElementById("signName");
+      var logPass = document.getElementById("signPass");
+      var logbutton = document.getElementById("logBtn");
+      var form = document.querySelector("form.login");
+      async function GetData() {
+        if (logName.value == "" || logPass.value == "") {
+          alert("Enter Valid Credentials!!!");
+          return false;
+        }
+        const dbref = ref(db);
+        try {
+          const snapshot = await get(child(dbref, "Users/" + logPass.value));
+          if (snapshot.exists()) {
+            if (snapshot.val().EmailId === logName.value) {
+              return true;
+            }
+          } else {
+            alert("User does not exist!");
+            return false;
+          }
+        } catch (error) {
+          alert("unsuccessful, error: " + error);
+          return false;
+        }
+      }
+
+      logbutton.addEventListener("click", async function (event) {
+        event.preventDefault(); 
+
+        var result = await GetData();
+        if (result) {
+          form.submit(); 
+        }
+      });
     </script>
-
-
-
 
     <script src="sign.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>

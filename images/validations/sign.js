@@ -5,6 +5,11 @@ function registerFunction() {
   userlogin.style.display = "none";
   register.style.display = "flex";
 }
+function userFunction(){
+  register.style.display="none";
+  userlogin.style.display="flex";
+  console.log("userfun");
+}
 function userValidate() {
   let usname = document.getElementById("signName").value;
   let upass = document.getElementById("signPass").value;
